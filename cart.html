@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Your Cart</title>
+
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
+
+<style>
+
+.container{
+width:80%;
+margin:auto;
+}
+
+.cart-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+padding:15px;
+margin:10px 0;
+border-radius:8px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.qty-btn{
+padding:5px 10px;
+margin:0 5px;
+cursor:pointer;
+}
+
+.remove-btn{
+background:#e53935;
+color:white;
+border:none;
+padding:5px 10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.total-box{
+background:#2e7d32;
+color:white;
+padding:15px;
+margin-top:20px;
+font-size:18px;
+border-radius:8px;
+display:flex;
+justify-content:space-between;
+}
+
+.form-box{
+background:white;
+padding:20px;
+margin-top:20px;
+border-radius:8px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-box input{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.place-btn{
+width:100%;
+padding:12px;
+background:#2e7d32;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.place-btn:hover{
+background:#1b5e20;
+}
+
+</style>
+
+</head>
+
+<body onload="displayCart()">
+
+<h1>Your Cart</h1>
+
+<div class="container">
+
+<div id="cartItems"></div>
+
+<div class="total-box">
+<span>Total</span>
+<span id="totalPrice">£0</span>
+</div>
+
+<div class="form-box">
+
+<h3>Delivery Details</h3>
+
+<input type="text" placeholder="Full Name" required>
+<input type="text" placeholder="Address" required>
+<input type="text" placeholder="City" required>
+<input type="text" placeholder="Postcode" required>
+
+<button class="place-btn" onclick="goToCheckout()">Proceed to Checkout</button>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
