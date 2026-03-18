@@ -5,8 +5,8 @@
 
 <title>Login</title>
 
-<link rel="stylesheet" href="css/style.css">
-<script src="js/script.js"></script>
+<link rel="stylesheet" href="./css/style.css">
+<script src="./js/script.js"></script>
 
 <style>
 
@@ -25,6 +25,10 @@ width:300px;
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.2);
 text-align:center;
+}
+
+.login-box h2{
+margin-bottom:10px;
 }
 
 .login-box input{
@@ -60,6 +64,16 @@ text-decoration:none;
 font-weight:bold;
 }
 
+.register a:hover{
+text-decoration:underline;
+}
+
+.note{
+margin-top:10px;
+font-size:13px;
+color:red;
+}
+
 </style>
 
 </head>
@@ -74,17 +88,22 @@ font-weight:bold;
 <!-- ✅ FIXED FORM -->
 <form onsubmit="loginUser(event)">
 
-<input type="email" id="loginEmail" placeholder="Email" required>
+<input type="email" id="loginEmail" placeholder="Enter Email" required>
 
-<input type="password" id="loginPassword" placeholder="Password" required>
+<input type="password" id="loginPassword" placeholder="Enter Password" required>
 
-<button class="login-btn">Login →</button>
+<button type="submit" class="login-btn">Login →</button>
 
 </form>
 
 <div class="register">
 New customer? <a href="signup.html">Register here</a>
 </div>
+
+<!-- ✅ Helpful message -->
+<p class="note">
+First time user? Please register before logging in.
+</p>
 
 </div>
 
